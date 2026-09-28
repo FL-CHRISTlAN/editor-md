@@ -1,0 +1,6 @@
+{
+  "name": "Markdown Editor",
+  "description": "Editor WYSIWYG moderno y rápido que convierte automáticamente a Markdown limpio, con exportación MD, PDF e impresión.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

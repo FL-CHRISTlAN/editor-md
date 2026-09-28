@@ -1,0 +1,289 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom TipTap Prose Styling */
+.tiptap-content .ProseMirror {
+  outline: none;
+  min-height: 480px;
+  line-height: 1.75;
+  color: #1e293b;
+}
+
+.tiptap-content .ProseMirror > *:first-child {
+  margin-top: 0;
+}
+
+.tiptap-content .ProseMirror h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+}
+
+.tiptap-content .ProseMirror h2 {
+  font-size: 1.45rem;
+  line-height: 1.85rem;
+  font-weight: 600;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tiptap-content .ProseMirror h3 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.tiptap-content .ProseMirror p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-content .ProseMirror strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tiptap-content .ProseMirror em {
+  font-style: italic;
+}
+
+.tiptap-content .ProseMirror s {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.tiptap-content .ProseMirror a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.tiptap-content .ProseMirror blockquote {
+  border-left: 3px solid #cbd5e1;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #475569;
+}
+
+.tiptap-content .ProseMirror ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-content .ProseMirror ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.tiptap-content .ProseMirror li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tiptap-content .ProseMirror hr {
+  border: 0;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.tiptap-content .ProseMirror pre {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  overflow-x: auto;
+  line-height: 1.6;
+}
+
+.tiptap-content .ProseMirror code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: #f1f5f9;
+  color: #0f172a;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e2e8f0;
+}
+
+.tiptap-content .ProseMirror pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border: none;
+  font-size: 0.875rem;
+}
+
+/* TipTap Tables */
+.tiptap-content .ProseMirror table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.tiptap-content .ProseMirror th,
+.tiptap-content .ProseMirror td {
+  border: 1px solid #cbd5e1;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.tiptap-content .ProseMirror th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tiptap-content .ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 1.8cm 1.8cm 2cm 1.8cm;
+    size: auto;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Hide app chrome */
+  .no-print,
+  nav,
+  header,
+  aside,
+  .sidebar,
+  .toolbar,
+  button,
+  .toast-container,
+  .markdown-preview-pane {
+    display: none !important;
+  }
+
+  /* Expand print content */
+  .print-area {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .print-area h1 {
+    font-size: 24pt !important;
+    border-bottom: 2pt solid #333 !important;
+    padding-bottom: 8pt !important;
+    margin-bottom: 16pt !important;
+    page-break-after: avoid;
+  }
+
+  .print-area h2 {
+    font-size: 16pt !important;
+    margin-top: 18pt !important;
+    page-break-after: avoid;
+  }
+
+  .print-area h3 {
+    font-size: 13pt !important;
+    page-break-after: avoid;
+  }
+
+  .print-area table {
+    page-break-inside: avoid;
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  .print-area th,
+  .print-area td {
+    border: 1pt solid #888 !important;
+    padding: 6pt 8pt !important;
+  }
+
+  .print-area pre {
+    background-color: #f5f5f5 !important;
+    color: #111 !important;
+    border: 1pt solid #ccc !important;
+    padding: 10pt !important;
+    page-break-inside: avoid;
+    font-size: 9pt !important;
+  }
+
+  .print-area code {
+    font-size: 9pt !important;
+    background-color: #f1f1f1 !important;
+    color: #111 !important;
+  }
+
+  .print-area blockquote {
+    border-left: 3pt solid #888 !important;
+    color: #444 !important;
+  }
+}
